@@ -1,7 +1,7 @@
 //references for all the elements
 const resetButton = document.querySelector('.reset');
 const counterDisplay = document.querySelector('.counter');
-const multipleInputElem = document.querySelector('.multiple');
+const multipleInputElem = document.querySelector('#multiple');
 const decrementBtn = document.querySelector('.decrement');
 const incrementBtn = document.querySelector('.increment');
 
@@ -11,23 +11,25 @@ var multiples = 1;
 //add event listeners 
 
 function decrementBtnFunction(){
+
     counter -= multiples;
-    alert(counterDisplay = counter)
+    counterDisplay.textContent = counter;
 }
 function incrementBtnFunction(){
     counter += multiples;
-   alert(counterDisplay = counter)
+    counterDisplay.textContent = counter;
 }
 function resetBtnFunction(){
  counter = 0;
- alert(counterDisplay = counter)
+ counterDisplay.textContent = counter;
 }
 
 function inputText () {
-    multipleInputElem= Number(multipleInputElem.value);
+    multiples = parseInt(multipleInputElem.value);
+    
 }
 
 decrementBtn.addEventListener('click', decrementBtnFunction);
 incrementBtn.addEventListener('click', incrementBtnFunction);
 resetButton.addEventListener('click', resetBtnFunction);
-multipleInputElem.addEventListener('click', inputText);
+multipleInputElem.addEventListener('input', inputText);
