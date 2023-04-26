@@ -1,0 +1,20 @@
+.counter-widg{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    border: 1px solid black;
+    padding: 10px;
+
+}
+
+.counter-widget .counter {
+    font-size: 0.9em;
+  }
+  
+  .counter-widget input {
+    width: 40px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+  }
